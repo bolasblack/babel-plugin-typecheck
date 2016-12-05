@@ -1809,8 +1809,9 @@ export default function ({types: t, template}): Object {
       case 'NullableTypeAnnotation':
         return checks.nullable({input, type: annotation.typeAnnotation, scope});
       case 'VoidTypeAnnotation':
-      case 'NullLiteralTypeAnnotation':
         return checks.void({input});
+      case 'NullLiteralTypeAnnotation':
+        return checks.null({input});
     }
   }
 
